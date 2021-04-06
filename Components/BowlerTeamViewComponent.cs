@@ -15,7 +15,7 @@ namespace MalPalBowling.Components
             context = ctx;
         }
 
-
+        //selects what we want from the database
         public IViewComponentResult Invoke()
         {
             return View(context.Teams
