@@ -24,9 +24,11 @@ namespace MalPalBowling.Controllers
             _logger = logger;
             context = ctx;
         }
-
+        
+        //pagination
         public IActionResult Index(long? bowlerteamid, string bowlerteamname, int pageNum = 0)
         {
+            //show just 5 bowlers at a time
             int pageSize = 5;
 
             return View(new IndexViewModel
@@ -50,7 +52,8 @@ namespace MalPalBowling.Controllers
                 TeamName = bowlerteamname
             });   
         }
-
+        
+        //privacy page
         public IActionResult Privacy()
         {
             return View();
