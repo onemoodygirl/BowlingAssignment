@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
+//this is a file to help get the page numbers to display
 namespace MalPalBowling.Infrastructure
 {
     [HtmlTargetElement("div", Attributes = "page-info")]
@@ -42,7 +43,7 @@ namespace MalPalBowling.Infrastructure
             for (int i = 1; i <= PageInfo.NumPages; i++)
             {
                 TagBuilder individualTag = new TagBuilder("a");
-
+                //this helps us get all the page numbers
                 KeyValuePairs["pageNum"] = i;
                 individualTag.Attributes["href"] = urlHelp.Action("Index", KeyValuePairs);
                 individualTag.InnerHtml.AppendHtml(i.ToString());
