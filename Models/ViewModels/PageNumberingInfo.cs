@@ -1,6 +1,7 @@
 ﻿using System;
 namespace MalPalBowling.Models.ViewModels
 {
+    //file to help get all the different page numbers
     public class PageNumberingInfo
     {
         public int NumItemsPerPage { get; set; }
