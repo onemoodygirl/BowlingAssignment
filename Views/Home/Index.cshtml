@@ -4,9 +4,11 @@
 
 @model MalPalBowling.Models.ViewModels.IndexViewModel
 
+<!--This gives the name of the team selected-->
 @*@foreach (var x in Model.Teams)
 {<h3>@x.TeamName</h3>}*@
 
+<!--This displays each bowler and their info-->
 @foreach (var x in Model.Bowler)
 {
     <h4>@x.BowlerFirstName @x.BowlerMiddleInit @x.BowlerLastName </h4>
