@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model MalPalBowling.Models.ViewModels.IndexViewModel
+
+@*@foreach (var x in Model.Teams)
+{<h3>@x.TeamName</h3>}*@
+
+@foreach (var x in Model.Bowler)
+{
+    <h4>@x.BowlerFirstName @x.BowlerMiddleInit @x.BowlerLastName </h4>
+    <p>@x.BowlerAddress, @x.BowlerCity, @x.BowlerState @x.BowlerZip</p>
+}
+
+<div page-info="@Model.PageNumberingInfo" team-name="@Model.TeamName"
+     page-url-teamname="@Model.TeamName">
+
+</div>

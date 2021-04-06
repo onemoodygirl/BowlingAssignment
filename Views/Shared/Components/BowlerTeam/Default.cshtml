@@ -1,0 +1,14 @@
+﻿
+@addTagHelper *, MalPalBowling
+
+@model IEnumerable<Team>
+
+<a asp-action="Index" asp-controller="Home" asp-route-bowlerteamid="">Home</a><br />
+
+@foreach (var x in Model)
+{
+    <a asp-action="Index" asp-controller="Home"
+       asp-route-bowlerteamid="@x.TeamId"
+       asp-route-bowlerteamname="@x.TeamName">@x.TeamName</a>
+    <br />
+}
